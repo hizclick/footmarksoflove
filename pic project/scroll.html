@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" media="screen" href="http://fontlibrary.org/face/glacial-indifference" type="text/css"/>
+ 
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #draggable { width: 150px; height: 150px; padding: 0.5em; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+<script type="text/javascript" src="dist\js\html2canvas.min.js"></script>
+
+  <script>
+
+    var colorWell;
+var defaultColor = "#0000ff";
+
+window.addEventListener("load", startup, false)
+
+
+function startup() {
+  colorWell = document.querySelector("#colorWell");
+  colorWell.value = defaultColor;
+  colorWell.addEventListener("input", updateFirst, false);
+  colorWell.select();
+}
+
+function updateFirst(event) {
+
+    document.getElementById('editable').style.color = event.target.value;
+    document.getElementById('white_div').style.color = event.target.value;
+
+
+
+}
+
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+  </script>
+<style>
+  .col-md-3{
+  display: inline-block;
+  margin-left:-4px;
+}
+#text_menu_bar{}
+#image_content, #image_content2{
+  background-size: cover;
+}
+.col-md-3 img{
+  width:100%;
+  height:auto;
+}
+body .carousel-indicators li{
+  background-color:red;
+}
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+  background-color:red;
+}
+body .no-padding{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+img{
+    float: left;
+    width: 10px;
+    max-height: 150px;
+    object-fit: cover;
+}
+ li{ 
+  display:inline;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.6fr 1.3fr 1.6fr 0.5fr;
+  grid-template-rows: 1fr 1.6fr 0.4fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "left center center right"
+    "left center center right"
+    "left buttom buttom right";
+}
+.center { grid-area: center; }
+.left { grid-area: left; }
+.right { grid-area: right; }
+.buttom { grid-area: buttom; }
+
+  #draggable { width: 150px; height: 150px; padding: 0.5em; }
+.btn{
+ background-color:  #e7dcda;
+
+}
+
+</style>
+</head>
+
+<body onload="alert('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
+
+
+<div class="grid-container">
+  <div class="center">
+   <div class="card bg-light text-dark" style="margin-left: 30%; margin-top: 2%; width: 60%; height: 20%" style="display: none" id = "text_menu_bar_card">
+    <div class="card-body">
+    <ul id="text_menu_bar">
+      <li onclick="makeBold()"><button class="btn btn-light" style="background-color:  #e7dcda;">BOLD</button></li>
+      <li onclick="makeItalic()"><button class="btn btn-light">ITALIC</button></li>
+      <li onclick="dmakeUnderline()"><button class="btn btn-light">UNDERLINE</button></li>
+      <li onclick=""><button class="btn btn-light"><select onchange="fontEditor(this[this.selectedIndex].value)">
+    <option>Arial</option>
+    <option value="Calibri">Calibri</option>
+    <option value="Comic Sans MS">Comic Sans MS</option>
+    <option value="GlacialIndifferenceRegular">Glacial Indifference</option>
+</select></button></li>
+      <li onclick=""><button class="btn btn-light"> <input type="color" value="#ff0000" id="colorWell"></button></li>
+    </ul>
+  </div>
+</div>
+<div id="content">
+    <div id="image_content" style="width: 30%; height: auto;  margin-left: 30%; margin-top: 5%; padding: 10px; float: left ">
+    <div id="draggable" class="ui-widget-content">
+  <p></p>
+  <textarea id="editable" style="width: 100%; height: 100%; resize: both !important; font-family: 'GlacialIndifferenceRegular'"></textarea>
+</div></div>
+ 
+<div id="image_content2" style="width: 30%; height: auto;  margin-top: 5%; margin-left: 1%;  padding: 3% 3% 3% 3%; float: left"> <div contenteditable="true"  id="white_div" style="background-color: white; width: 100%; height: 100%; font-family: 'GlacialIndifferenceRegular';"></div></div>
+</div>
+</div>
+<div class="left">
+    <div class="card bg-light text-dark" style="margin-left: 10%; margin-top: 5%;">
+    <div class="card-body"><img src="images/text_icon.png" style="max-width: 100%; height: 100%" onclick="add_image()">
+    </div>
+  </div>
+    <div class="card bg-light text-dark" style="margin-left: 10%; margin-top: 5%;">
+      <div class="card-body">
+<button class="btn btn-light"><select onchange="change_border(this[this.selectedIndex].value)">
+    <option>Frame 1</option>
+    <option value="Calibri">Frame 2</option>
+    <option value="Comic Sans MS">Frame 3</option>
+</select></button>
+  </div>
+</div>
+
+<div id="capture" style="padding: 10px; background: #f5da55">
+    <h4 style="color: #000; ">Hello world!</h4>
+</div>
+
+<div class="card bg-light text-dark" style="margin-left: 10%; margin-top: 5%;">
+      <div class="card-body" style="font-family: 'GlacialIndifferenceRegular';">
+      <button style="border:none;" onclick="add_pretext('Hi Love')">Hi Love</button> <br> <br>
+      <button style="border: none;" onclick="add_pretext('Lovely Christmas')">Lovely Christmas</button> <br> <br>
+      <button style="border: none;" onclick="add_pretext('Kind soul')">Kind soul</button> <br> <br>
+      <button style="border: none;" onclick="add_pretext('Love for you')">Love for you</button> <br> <br>
+      <button style="border: none;" onclick="add_pretext('Hi beautiful')">Hi beautiful</button> <br> <br>
+      <button style="border: none;" onclick="add_pretext('Lovely Christmas')">Lovely Christmas</button> <br> <br>
+      <button style="border: none;" onclick="add_pretext('Kind soul')">Kind soul</button>
+  </div>
+</div>
+
+  </div>
+
+   
+  </div>
+  <div class="right">
+      <button type="button" onclick="createcanvas()">Open Modal</button>
+      <button type="button" onclick="converttoimage()">Share</button>
+      <div id="canvas"></div>
+        </div>
+  <div class="buttom"><div id="demo" class="carousel slide" data-ride="carousel">
+    
+<!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <!-- The slideshow -->
+  <div class="container carousel-inner no-padding">
+    <div class="carousel-item active">
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img>
+      </div>    
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="images/LisaKastner3.jpeg" title="Lorem Ipsum important" id = "1stimg" onclick="choose_image('images/LisaKastner3.jpeg','1stimg', 'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits.', 'I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','http://lelique.de','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz', 'kunsttherapeutin')"> 
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="images/LisaKastner2.jpeg"  title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."  id = "2stimg" onclick="choose_image('images/LisaKastner2.jpeg', '2stimg'">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="images/milkyway_nate.jpg" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry." id = "3stimg" onclick="choose_image('images/milkyway_nate.jpg', '3stimg')">
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img/>
+      </div>  
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="images/LisaKastner1.jpeg" id = "4stimg" onclick="choose_image('images/LisaKastner1.jpeg', '4stimg')"> 
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="images/sea_nate.jpg"  id = "5stimg" onclick="choose_image('images/sea_nate.jpg', '5stimg')">
+      </div>   
+       <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="images/moon_nate.jpg" id = "6stimg" onclick="choose_image('images/moon_nate.jpg', '6stimg')">
+      </div> 
+    </div>
+
+    <div class="carousel-item">
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img/>
+      </div>  
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="C:\Users\hizki\OneDrive\Desktop\1.jpg" id = "7stimg" onclick="choose_image('', '7stimg')"> 
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="images/2.jpg"  id = "8stimg" onclick="choose_image('images/2.jpg', '8stimg')">
+    </div>
+
+  </div> 
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+    <div class="card-footer" id="about" style="margin-left: 34%; width: 49%; margin-top: 1%; display: none">
+  <div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container" style = "background-color:  #e7dcda; font-family: 'GlacialIndifferenceRegular';">
+        <h2 id='aname'>Lisa Kastner</h2>
+        <p id='aabout'>Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. 
+        She also has an incredible art collection of colorful portraits. 
+
+        <q id="aquate">I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.</q>
+      </p>
+      <p id="about2">We love her amazing and passionate abstract art style. Check out her website or Instagram:</p>
+        <img src="images/web.png" style="width: 2%; margin-top: "/><a id="web"href="http://lelique.de/">&nbsp;&nbsp;http://lelique.de</a> <br>
+        <img src="images/instagram.png" style="width: 2%; margin-top: "/><a id="instagram" href="https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz">&nbsp;&nbsp;unsttherapeutin</a>
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+<script type="text/javascript">
+  function add_pretext(argument) {
+    // body...
+    document.getElementById('editable').innerHTML = document.getElementById('editable').innerHTML + " " + argument;
+
+  }
+
+  function choose_image(source, i, nameartist,about,quote, aabout, web, uname2,instagram){
+
+    
+      var elem = document.getElementById('image_content');
+      elem.style.backgroundImage = 'url('+source+')';
+      elem.style.height = "382px";
+
+
+
+      var hii = document.getElementById(i).clientHeight;
+      var elem2 = document.getElementById('image_content2');
+      elem2.style.backgroundImage = 'url('+source+')';
+      elem2.style.height = "382px";
+
+      var elem = document.createElement('q');
+      elem.id = "au";
+      content = document.createTextNode(quote);
+      elem.appendChild(content)
+
+
+
+      document.getElementById('about').style.display = "block";
+      document.getElementById('aname').innerHTML = nameartist;
+      document.getElementById('aabout').innerHTML = about;
+      document.getElementById('about2').innerHTML = '';
+      document.getElementById('about2').appendChild(elem);
+      document.getElementById('web').title = web;
+      document.getElementById('web').href = web;
+      document.getElementById('instagram').title = uname2;
+      document.getElementById('instagram').href = instagram;
+
+     a.href = "http://example.com";
+      
+
+  }
+  function add_image(){
+          document.getElementById("text_menu_bar_card").style.display = 'block';
+      if(document.getElementById("editable").style.backgroundColor == 'transparent'){
+             document.getElementById("editable").style.backgroundColor = 'white';
+
+      }else{
+             document.getElementById("editable").style.backgroundColor = 'transparent';
+      }
+
+  }
+
+     function makeItalic() {
+        document.getElementById('editable').style.fontStyle = 'italic';
+        document.getElementById('white_div').style.fontStyle = 'italic';
+}
+
+function dmakeUnderline() {
+    document.getElementById('editable').style.textDecoration = "underline";
+    document.getElementById('white_div').style.textDecoration = 'underline';
+
+}
+  
+function makeBold() {
+  document.getElementById('editable').style.fontWeight = 'bold';
+  document.getElementById('white_div').style.fontWeight = 'bold';
+
+}
+
+    function fontEditor(fontName) {
+     document.getElementById('editable').style.fontFamily  = fontName;
+     document.getElementById('white_div').style.fontFamily = fontName;
+
+
+   
+}
+
+function change_border(){
+ document.getElementById("image_content").style.border = "thick solid #0000FF";
+
+}
+
+</script>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+    <script type="text/javascript">
+
+ 
+
+
+</script>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="createcanvas()">Close</button>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<script type="text/javascript">
+
+
+
+var canvas = document.getElementById('canv');
+
+function createcanvas(){
+   html2canvas(document.querySelector("#image_content2")).then(canvas => {
+    canvas.setAttribute("id", "canv");
+    document.body.appendChild(canvas)
+
+});
+
+}
+
+
+function converttoimage(){
+
+
+    var canvas = document.getElementById('canv');
+
+    canvas.toBlob(function(blob) {
+  var newImg = document.createElement('img'),
+      url = URL.createObjectURL(blob);
+
+  newImg.onload = function() {
+    // no longer need to read the blob so it's revoked
+    URL.revokeObjectURL(url);
+  };
+
+  newImg.src = url;
+  document.body.appendChild(newImg);
+  alert(newImg.src);
+});
+}
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Your Website Title</title>
+<!-- You can use Open Graph tags to customize link previews.
+Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+<script type="text/javascript" src="dist\js\html2canvas.min.js"></script>
+
+
+</head>
+<body>
+
+
+
+
+<img src="https://static.addtoany.com/images/dracaena-cinnabari.jpg" height="291" width="440" alt="Dracaena cinnabari">
+preview
+
+
+<img id='im' src="">
+
+<button onclick="myFunction()">Try it</button>
+
+
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="capture" style="padding: 10px; background: #f5da55">
+    <h4 style="color: #000; ">Hello world!</h4>
+    <script type="text/javascript">
+	html2canvas(document.querySelector("#capture")).then(canvas => {
+    var image = new Image();
+	
+
+  var x = document.createElement("IMG");
+  x.src = canvas.toDataURL("image/png");
+
+
+  document.body.appendChild(x);
+
+  document.getElementById('capture').style.display = 'none';
+});
+var a2a_config = a2a_config || {};
+a2a_config.overlays = a2a_config.overlays || [];
+a2a_config.overlays.push({
+    services: ['pinterest', 'facebook', 'houzz', 'tumblr'],
+    size: '50',
+    style: 'horizontal',
+    position: 'top center'
+});
+
+
+
+
+</script>
+</body>
+</html>

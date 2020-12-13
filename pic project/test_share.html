@@ -1,0 +1,50 @@
+<style type="text/css">
+	/* Container holding the image and the text */
+.container {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  background-color: black;
+  color: white;
+  margin-top: -200px;
+}
+
+
+</style>
+
+
+
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+
+<div class="container">
+<img src="https://static.addtoany.com/images/dracaena-cinnabari.jpg" height="291" width="440" alt="Dracaena cinnabari">
+  <div class="text-block">
+  
+    <h4>Nature</h4>
+    <p>What a beautiful sunrise</p>
+  </div>
+</div>
+
+<script type="text/javascript">
+	var a2a_config = a2a_config || {};
+a2a_config.overlays = a2a_config.overlays || [];
+a2a_config.overlays.push({
+    services: ['pinterest', 'facebook', 'houzz', 'tumblr'],
+    size: '50',
+    style: 'horizontal',
+    position: 'top center'
+});
+	
+
+
+ FB.ui({
+  method: 'feed',
+  link: window.location.href,
+  picture: img_url,
+ }, function(response){});
+</script>
