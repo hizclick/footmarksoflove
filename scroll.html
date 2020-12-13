@@ -503,10 +503,23 @@ a2a_config.overlays.push({
 });
 
 
+ 
+ 
 
 </script>
 
+<script>
+var a2a_config = a2a_config || {};
+a2a_config.overlays = a2a_config.overlays || [];
+a2a_config.overlays.push({
+    services: ['pinterest', 'facebook', 'houzz', 'tumblr'],
+    size: '50',
+    style: 'horizontal',
+    position: 'top center'
+});
+</script>
 
+<script async src="https://static.addtoany.com/menu/page.js"></script>
 
 
 </html>
