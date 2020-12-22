@@ -1,0 +1,65 @@
+<html>
+<head>
+<script src="dist/js/html2canvas.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="capture" style="padding: 10px; background: #f5da55">
+    <h4 style="color: #000; ">Hello world!</h4>
+</div>
+
+<div id="copyim">
+
+</div>
+
+<script type="text/javascript">
+html2canvas(document.querySelector("#capture")).then(canvas => {
+    document.getElementById('copyim').appendChild(canvas);
+
+   canvas.setAttribute("id","canvasImg");
+	var ctx = canvas.getContext('2d');
+
+	ctx.fillRect(100, 100,100,100);
+
+	
+
+   $('#form').bind('submit', function(e){
+        e.preventDefault();
+        var password = $('#pass').val();
+        localStorage.setItem('form-password', JSON.stringify(password));
+      });
+
+      // save canvas image as data url (png format by default)
+      var dataURL = canvas.toDataURL();
+
+      // set canvasImg image src to dataURL
+      // so it can be saved as an image
+      document.getElementById('canvasImg').src = dataURL;
+
+      $.ajax({
+        type: "POST",
+        url: "http://localhost/test.php",
+        data: { 
+           imgBase64: dataURL
+        }
+      }).done(function(response) {
+        console.log('saved: ' + response); 
+      });
+
+
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

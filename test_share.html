@@ -1,0 +1,153 @@
+<html>
+<head>
+ 
+
+
+  <style>
+  #draggable { width: 150px; height: 150px; padding: 0.5em; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+<script type="text/javascript" src="dist\js\html2canvas.min.js"></script>
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+
+<script>
+
+    var colorWell;
+var defaultColor = "#0000ff";
+
+window.addEventListener("load", startup, false)
+
+
+function startup() {
+  colorWell = document.querySelector("#colorWell");
+  colorWell.value = defaultColor;
+  colorWell.addEventListener("input", updateFirst, false);
+  colorWell.select();
+}
+
+function updateFirst(event) {
+
+    document.getElementById('mydiv').style.color = event.target.value;
+    document.getElementById('white_div').style.color = event.target.value;
+
+
+
+}
+
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
+  </script>
+<style>
+  .col-md-3{
+  display: inline-block;
+  margin-left:-4px;
+}
+#text_menu_bar{}
+#image_content, #image_content2{
+  background-size: cover;
+}
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: white;
+  border: 1px solid #d3d3d3;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: white;
+}
+.col-md-3 img{
+  width:100%;
+  height:auto;
+}
+body .carousel-indicators li{
+  background-color:red;
+}
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+  background-color:red;
+}
+body .no-padding{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+img{
+    float: left;
+    width: 10px;
+    max-height: 150px;
+    object-fit: cover;
+}
+ li{ 
+  display:inline;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.6fr 1.3fr 1.6fr 0.5fr;
+  grid-template-rows: 1fr 1.6fr 0.4fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "left center center right"
+    "left center center right"
+    "left buttom buttom right";
+}
+.center { grid-area: center; }
+.left { grid-area: left; }
+.right { grid-area: right; }
+.buttom { grid-area: buttom; }
+
+  #draggable { width: 150px; height: 150px; padding: 0.5em; }
+.btn{
+ background-color:  #e7dcda;
+
+}
+
+</style>
+
+
+
+</head>
+<body>
+<div class="container">
+
+<img src="images/5fdfb99ae97ca.png">
+
+  <div class="text-block">
+  
+    <h4>Nature</h4>
+    <p>What a beautiful sunrise</p>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+	var a2a_config = a2a_config || {};
+a2a_config.overlays = a2a_config.overlays || [];
+a2a_config.overlays.push({
+    services: ['pinterest', 'facebook', 'houzz', 'tumblr'],
+    size: '50',
+    style: 'horizontal',
+    position: 'top center'
+});
+	
+
+</script>
+
+
+</html>

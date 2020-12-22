@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script type="text/javascript">
+
+
+
+</script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+	function download() {
+var download = document.getElementById("download");
+var image = document.getElementById("myCanvas").toDataURL("image/png")
+    .replace("image/png", "image/octet-stream");
+download.setAttribute("href", image);
+//download.setAttribute("download","archive.png");
+}
+
+
+
+</script>
+
+<a id="download" download="triangle.png">
+<button type="button" onClick="download()">Download</button>
+</a>
+    
+<canvas id="myCanvas" width="720" height="450">Your browser does not support Canvas.</canvas>
+
+</body>
+</html>

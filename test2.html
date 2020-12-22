@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<canvas id="canvas" height="300" width="300"> </canvas>
+
+<script type="text/javascript">
+	
+
+	ar canvas = document.getElementById("canvas");
+
+var ctx = canvas.getContext("2d");
+
+var data = "data:image/svg+xml," +
+
+           "<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'>" +
+
+             "<foreignObject width='100%' height='100%'>" +
+
+               "<div xmlns='http://www.w3.org/1999/xhtml' style='font-size:12px'>" +
+
+                "<ul> <li style='color:red'> hello </li>  <li style='color:green'>thomas</li> </ul> "  +   
+                
+       
+                
+               "</div>" +
+
+             "</foreignObject>" +
+
+           "</svg>";
+
+var img = new Image();
+
+img.src = data;
+
+img.onload = function() { ctx.drawImage(img, 0, 0); }
+   
+
+</script>
+</body>
+</html>

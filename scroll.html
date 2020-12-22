@@ -4,7 +4,6 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" media="screen" href="http://fontlibrary.org/face/glacial-indifference" type="text/css"/>
  
-<script async src="https://static.addtoany.com/menu/page.js"></script>
 
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
@@ -20,13 +19,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
+<script async src="https://static.addtoany.com/menu/page.js"></script>
 
 <script type="text/javascript" src="dist\js\html2canvas.min.js"></script>
 
   <script>
 
     var colorWell;
-var defaultColor = "#0000ff";
+var defaultColor = "#000000";
 
 window.addEventListener("load", startup, false)
 
@@ -90,7 +90,7 @@ body .no-padding{
   padding-right: 0;
 }
 
-img{
+.container .carousel-inner .no-padding img{
     float: left;
     width: 10px;
     max-height: 150px;
@@ -124,7 +124,9 @@ img{
 </style>
 </head>
 
-<body onload="alert('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')">
+<body onload="alert('Hi beautiful soul, you are about to spread some love. This is how it works: 1.  Check out our talented artists and choose an artwork for your Love Card2.    Customize your Love Card cover (left side bar: drag and drop a premade text or write your own greeting) 3.    Write your Love Card message (right side) 4.  Share the love and tag @footmarksoflove')">
+
+
 
 
 <div class="grid-container">
@@ -149,12 +151,14 @@ img{
 
 
 
-    <div id="image_content" style="width: 50%; height: auto; padding: 10px; float: left;">
+    <div id="image_content" style="width: 50%; height: 100%; padding: 10px; float: left;">
+
+
   <p></p>
   <div id="mydiv" contenteditable="true" style="  border: 2px solid;
   width: 300px;
   resize: both;
-  overflow: auto;">
+  overflow: auto; background-color: transparent">
   <div id="mydivheader" style="background-color: transparent">  
 </div>
 
@@ -167,12 +171,14 @@ img{
 
 </div>
 
-<div id="image_content2" style="width: 48%; height: auto;  margin-left: 1%;  padding: 3% 3% 3% 3%; float: left"> <div contenteditable="true"  id="white_div" style="background-color: white; width: 100%; height: 100%; font-family: 'GlacialIndifferenceRegular'; "></div></div>
+<div id="image_content2" style="width: 48%; height: 100%;  margin-left: 1%;  padding: 3% 3% 3% 3%; float: left"> <div contenteditable="true"  id="white_div" style="background-color: white; width: 100%; height: 100%; font-family: 'GlacialIndifferenceRegular'; "></div>
+
+</div>
 </div>
 </div>
 <div class="left">
     <div class="card bg-light text-dark" style="margin-left: 10%; margin-top: 5%;">
-    <div class="card-body"><img src="images/text_icon.png" style="max-width: 100%; height: 100%" onclick="add_image()">
+    <div class="card-body"><img src="images/text_icon.png" style="max-width: 100%; height: 100%" onclick="add_image()" data-a2a-overlay="false">
     </div>
   </div>
     <div class="card bg-light text-dark" style="margin-left: 10%; margin-top: 5%;">
@@ -185,19 +191,14 @@ img{
   </div>
 </div>
 
-<div id="capture" style="padding: 10px; background: #f5da55">
-    <h4 style="color: #000; ">Hello world!</h4>
-</div>
 
 <div class="card bg-light text-dark" style="margin-left: 10%; margin-top: 5%;">
       <div class="card-body" style="font-family: 'GlacialIndifferenceRegular';">
-      <button style="border:none;" onclick="add_pretext('Hi Love')">Hi Love</button> <br> <br>
-      <button style="border: none;" onclick="add_pretext('Lovely Christmas')">Lovely Christmas</button> <br> <br>
-      <button style="border: none;" onclick="add_pretext('Kind soul')">Kind soul</button> <br> <br>
-      <button style="border: none;" onclick="add_pretext('Love for you')">Love for you</button> <br> <br>
-      <button style="border: none;" onclick="add_pretext('Hi beautiful')">Hi beautiful</button> <br> <br>
-      <button style="border: none;" onclick="add_pretext('Lovely Christmas')">Lovely Christmas</button> <br> <br>
-      <button style="border: none;" onclick="add_pretext('Kind soul')">Kind soul</button>
+      <button style="border:none;" onclick="add_pretext('HI LOVE')">HI LOVE</button> <br> <br>
+      <button style="border: none;" onclick="add_pretext('KIND SOUL')">KIND SOUL</button> <br> <br>
+      <button style="border: none;" onclick="add_pretext('LOVE FOR YOU')">LOVE FOR YOU</button> <br> <br>
+      <button style="border: none;" onclick="add_pretext('HI BEAUTIFUL')">HI BEAUTIFUL</button> <br> <br>
+      <button style="border: none;" onclick="add_pretext('LOVELY CHRISTMAS')">LOVELY CHRISTMAS</button> <br> <br>
   </div>
 </div>
 
@@ -224,13 +225,19 @@ img{
         <img>
       </div>    
       <div class="col-xs-3 col-sm-3 col-md-3">
-        <img src="images/LisaKastner3.jpeg" title="Lorem Ipsum important" id = "1stimg" onclick="choose_image('images/LisaKastner3.jpeg','1stimg', 'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits.', 'I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','http://lelique.de','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz', 'kunsttherapeutin')"> 
+        <img style="    float: left;
+    max-height: 150px;
+    object-fit: cover;" src="images/LisaKastner3.jpeg" title="Lorem Ipsum important" id = "1stimg" onclick="choose_image('images/LisaKastner3.jpeg','1stimg', 'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits.', 'I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','http://lelique.de','diekunsttherapeutin', 'https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz')"> 
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
-        <img src="images/LisaKastner2.jpeg"  title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."  id = "2stimg" onclick="choose_image('images/LisaKastner2.jpeg', '2stimg'">
+        <img  style="    float: left;
+    max-height: 150px;
+    object-fit: cover;" src="images/LisaKastner2.jpeg"  title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."  id = "2stimg" onclick="choose_image('images/LisaKastner2.jpeg', '2stimg',  'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits.', 'I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','http://lelique.de','diekunsttherapeutin', 'https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz')">
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
-        <img src="images/milkyway_nate.jpg" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry." id = "3stimg" onclick="choose_image('images/milkyway_nate.jpg', '3stimg')">
+        <img  style="    float: left;
+    max-height: 150px;
+    object-fit: cover;" src="images/milkyway_nate.jpg" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry." id = "3stimg" onclick="choose_image('images/milkyway_nate.jpg', '3stimg')">
       </div>   
     </div>
     <div class="carousel-item">
@@ -238,25 +245,41 @@ img{
         <img/>
       </div>  
       <div class="col-xs-3 col-sm-3 col-md-3">
-        <img src="images/LisaKastner1.jpeg" id = "4stimg" onclick="choose_image('images/LisaKastner1.jpeg', '4stimg')"> 
+        <img  style="    float: left;
+    max-height: 150px;
+    object-fit: cover;" src="images/LisaKastner1.jpeg" id = "4stimg" onclick="choose_image('images/LisaKastner1.jpeg', '4stimg',  'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits.', 'I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','http://lelique.de','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz', 'kunsttherapeutin')"> 
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
-        <img src="images/sea_nate.jpg"  id = "5stimg" onclick="choose_image('images/sea_nate.jpg', '5stimg')">
+        <img style="    float: left;
+    max-height: 150px;
+    object-fit: cover;" src="images/sea_nate.jpg"  id = "5stimg" onclick="choose_image('images/sea_nate.jpg', '5stimg','Nate Polta','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible And they are.His photography is soul touching. He manages to catch Mother Natures beauty, a person unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','', '', '', 'https://www.natepolta.com/Photos')">
       </div>   
        <div class="col-xs-3 col-sm-3 col-md-3">
-        <img src="images/moon_nate.jpg" id = "6stimg" onclick="choose_image('images/moon_nate.jpg', '6stimg')">
+        <img   style="    float: left;
+    max-height: 150px;
+    object-fit: cover;" src="images/moon_nate.jpg" id = "6stimg" onclick="choose_image('images/moon_nate.jpg', '6stimg','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible And they are.His photography is soul touching. He manages to catch Mother Natures beauty, a person unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','', '', '', '', 'https://www.natepolta.com/Photos')">
       </div> 
     </div>
 
     <div class="carousel-item">
       <div class="col-xs-3 col-sm-3 col-md-3">
-        <img/>
+      <img/>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3">
+
+        <img style="    float: left;
+    max-height: 150px;
+    object-fit: cover;"  src="images/woods_nate.jpg"  id = "9stimg" onclick="choose_image('images/woods_nate.jpg', '9stimg', 'Nate Polta', 'Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible And they are.His photography is soul touching. He manages to catch Mother Natures beauty, a person unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','', '', 'https://www.natepolta.com/Photos', '','')"/>
       </div>  
       <div class="col-xs-3 col-sm-3 col-md-3">
-        <img src="C:\Users\hizki\OneDrive\Desktop\1.jpg" id = "7stimg" onclick="choose_image('', '7stimg')"> 
+        <img  style="    float: left;
+    max-height: 150px;
+    object-fit: cover;" src="images/1.jpg" id = "7stimg" onclick="choose_image('images/1.jpg', '7stimg','Simon Burks', ' Simon Burks is a 26 years old artist resident in Hamburg (Germany).This artwork is untitled, «If Id name it, Id probably give it another title, like every single day We love Simons art because of this dynamic and its uniqueness and beautiful color patterns.Simon usually uses wax crayon or acryl paint. «I like my creative freedom - Im inspired by life«. Go check out his creative work and photography','', '', '','simonburks', 'https://www.instagram.com/si.burks/?hl=de')"> 
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
-        <img src="images/2.jpg"  id = "8stimg" onclick="choose_image('images/2.jpg', '8stimg')">
+        <img  style="    float: left;
+    max-height: 150px;
+    object-fit: cover;" src="images/2.jpg"  id = "8stimg" onclick="choose_image('images/2.jpg', '8stimg','Luisa', 'Luisa is the founder of footmarksoflove and a passionate explorer and educator.A sometimes stereotypically stubborn taurus when it comes to creating  positive change in this world. She is currently based in her hometown Hamburg but previously lived and worked abroad - experiences that led to her founding footmarksoflove: A community and institution to talk about, connect and educate about her favorite topic there ever was - LOVE. This photography is one of her travel snapshots. A beautiful wall in Malacca - Malaysia. ','I love to capture imperfect perfections.', '', '', '_luilicious', 'https://www.instagram.com/_luilicious' )">
     </div>
 
   </div> 
@@ -281,7 +304,7 @@ img{
         <q id="aquate">I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.</q>
       </p>
       <p id="about2">We love her amazing and passionate abstract art style. Check out her website or Instagram:</p>
-        <img src="images/web.png" style="width: 2%; margin-top: "/><a id="web"href="http://lelique.de/">&nbsp;&nbsp;http://lelique.de</a> <br>
+        <img src="images/web.png" style="width: 2%; margin-top: "/><a id="web" ></a> <br>
         <img src="images/instagram.png" style="width: 2%; margin-top: "/><a id="instagram" href="https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz">&nbsp;&nbsp;unsttherapeutin</a>
       </div>
     </div>
@@ -306,14 +329,13 @@ img{
     
       var elem = document.getElementById('image_content');
       elem.style.backgroundImage = 'url('+source+')';
-      elem.style.height = "382px";
 
 
 
       var hii = document.getElementById(i).clientHeight;
       var elem2 = document.getElementById('image_content2');
       elem2.style.backgroundImage = 'url('+source+')';
-      elem2.style.height = "382px";
+
 
       var elem = document.createElement('q');
       elem.id = "au";
@@ -327,13 +349,12 @@ img{
       document.getElementById('aabout').innerHTML = about;
       document.getElementById('about2').innerHTML = '';
       document.getElementById('about2').appendChild(elem);
-      document.getElementById('web').title = web;
+      document.getElementById('web').innerHTML = web;
       document.getElementById('web').href = web;
-      document.getElementById('instagram').title = uname2;
+      document.getElementById('instagram').innerHTML = uname2;
       document.getElementById('instagram').href = instagram;
 
-     a.href = "http://example.com";
-      
+      alert(document.getElementById('instagram').innerHTML);      
 
   }
   function add_image(){
@@ -379,7 +400,7 @@ function change_border(){
 
 </script>
 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
+<div id="myModal" class="modal fade" role="dialog" id="first">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -393,7 +414,28 @@ function change_border(){
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" onclick="converttoimage()">Share</button>
+        <button type="button" id="btn-Convert-Html2Image" data-target="#myModal2">Share</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="myModal2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" style="width: 900px; height: 700px">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body" id="mbody">
+                <div id="second"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id="btn-Convert-Html2Image">Share</button>
       </div>
     </div>
 
@@ -417,9 +459,37 @@ function createcanvas(){
     document.getElementById('prev').innerHTML = "";
     document.getElementById('prev').style.width = "150px";
     document.getElementById('prev').style.height = "200px";
-    document.getElementById('prev').appendChild(canvas)
+    document.getElementById('prev').appendChild(canvas);
+
+    getCanvas = canvas;
+
+      $("#btn-Convert-Html2Image").on('click', function () {
+    var imgageData = getCanvas.toDataURL("image/png");
+
+    // Now browser starts downloading it instead of just showing it
+        $.ajax({
+        type: "POST",
+        url: "http://localhost/test.php",
+        data: { 
+           imgBase64: imgageData
+        }
+      }).done(function(response) {
+
+          var x = document.createElement("IMG");
+          x.setAttribute("src", response);
+          x.setAttribute("alt", "The Pulpit Rock");
+
+          document.getElementById('prev').style.width = "500px";
+          document.getElementById('prev').style.height = "500px";        
+          document.getElementById('prev').innerHTML = ''
+          document.getElementById('prev').appendChild(x);
+    
 
 
+      });
+
+      
+  });
 });
 
   
@@ -493,33 +563,21 @@ function dragElement(elmnt) {
   }
 }
 
-  var a2a_config = a2a_config || {};
-a2a_config.overlays = a2a_config.overlays || [];
-a2a_config.overlays.push({
-    services: ['pinterest', 'facebook', 'houzz', 'tumblr'],
-    size: '50',
-    style: 'horizontal',
-    position: 'top center'
-});
 
-
- 
- 
-
-</script>
-
-<script>
 var a2a_config = a2a_config || {};
 a2a_config.overlays = a2a_config.overlays || [];
 a2a_config.overlays.push({
-    services: ['pinterest', 'facebook', 'houzz', 'tumblr'],
+    services: ['pinterest', 'facebook', 'houzz', 'tumblr', 'email'],
     size: '50',
     style: 'horizontal',
     position: 'top center'
 });
+
+
+
+
 </script>
 
-<script async src="https://static.addtoany.com/menu/page.js"></script>
 
 
 </html>
