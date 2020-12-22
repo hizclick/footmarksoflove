@@ -24,7 +24,7 @@ try {
 
     //Recipients
     $mail->setFrom('hizclick@gmail.com', 'Mailer');
-    $mail->addAddress('hizclick@gmail.net', 'Joe User');     // Add a recipient
+    $mail->addAddress('hizclick@gmail.com', 'Joe User');     // Add a recipient
     $mail->addReplyTo('hizclick@gmail.com', 'Information');
 
   // Content
