@@ -1,12 +1,34 @@
-
 <?php
-$to_email = "receipient@gmail.com";
-$subject = "Simple Email Test via PHP";
-$body = "Hi,nn This is test email send by PHP Script";
-$headers = "From: sender\'s email";
- 
-if (mail($to_email, $subject, $body, $headers)) {
-    echo "Email successfully sent to $to_email...";
-} else {
-    echo "Email sending failed...";
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require_once "vendor/autoload.php";
+
+//PHPMailer Object
+$mail = new PHPMailer(true); //Argument true in constructor enables exceptions
+
+//From email address and name
+$mail->From = "hizclick@gmail.com";
+$mail->FromName = "Full Name";
+
+//To address and name
+$mail->addAddress("hizclick@gmail.com", "Recepient Name");
+$mail->addAddress("hizclick@gmail.com"); //Recipient name is optional
+
+//Address to which recipient will reply
+$mail->addReplyTo("hizclick@gmail.com", "Reply");
+
+
+//Send HTML or Plain Text email
+$mail->isHTML(true);
+
+$mail->Subject = "Subject Text";
+$mail->Body = "<i>Mail body in HTML</i>";
+$mail->AltBody = "This is the plain text version of the email content";
+
+try {
+    $mail->send();
+    echo "Message has been sent successfully";
+} catch (Exception $e) {
+    echo "Mailer Error: " . $mail->ErrorInfo;
 }
