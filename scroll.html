@@ -415,6 +415,8 @@ function change_border(){
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" id="btn-Convert-Html2Image" data-target="#myModal2">Share</button>
+        <a download style="display:none" id="download">Download</a>
+
       </div>
     </div>
 
@@ -469,7 +471,7 @@ function createcanvas(){
     // Now browser starts downloading it instead of just showing it
         $.ajax({
         type: "POST",
-        url: "test.php",
+        url: "http://localhost/test.php",
         data: { 
            imgBase64: imgageData
         }
@@ -483,6 +485,9 @@ function createcanvas(){
           document.getElementById('prev').style.height = "500px";        
           document.getElementById('prev').innerHTML = ''
           document.getElementById('prev').appendChild(x);
+
+          document.getElementById('download').style.display = 'block';
+          document.getElementById('download').href = response;
     
 
 
