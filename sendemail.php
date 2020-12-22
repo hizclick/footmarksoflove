@@ -25,7 +25,7 @@ try {
     //Recipients
     $mail->setFrom('hizclick@gmail.com', 'Mailer');
 
-
+    $mail->addAddress('hizclick@gmail.com', 'Joe User'); 
   // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Here is the subject';
