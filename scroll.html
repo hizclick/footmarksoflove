@@ -124,7 +124,7 @@ body .no-padding{
 </style>
 </head>
 
-<body onload="alert('Hi beautiful soul, you are about to spread some love. This is how it works: 1.  Check out our talented artists and choose an artwork for your Love Card2.    Customize your Love Card cover (left side bar: drag and drop a premade text or write your own greeting) 3.    Write your Love Card message (right side) 4.  Share the love and tag @footmarksoflove')">
+<body onload="alert('Hi beautiful soul, you are about to spread some love. This is how it works: \r\n1.  Check out our talented artists and choose an artwork for your Love Card \r\n2.    Customize your Love Card cover (left side bar: drag and drop a premade text or write your own greeting) \r\n3.    Write your Love Card message (right side) \r\n4.  Share the love and tag @footmarksoflove')">
 
 
 
@@ -142,6 +142,15 @@ body .no-padding{
     <option value="Calibri">Calibri</option>
     <option value="Comic Sans MS">Comic Sans MS</option>
     <option value="GlacialIndifferenceRegular">Glacial Indifference</option>
+</select></button></li>
+  <li onclick=""><button class="btn btn-light"><select onchange="changefontsize(this[this.selectedIndex].value)">
+    <option value="12">12</option>
+    <option value="16">16</option>
+    <option value="18">18</option>
+    <option value="24">24</option>
+    <option value="32">32</option>
+    <option value="64">64</option>
+    <option value="72">72</option>
 </select></button></li>
       <li onclick=""><button class="btn btn-light"> <input type="color" value="#ff0000" id="colorWell"></button></li>
     </ul>
@@ -207,7 +216,7 @@ body .no-padding{
    
   </div>
   <div class="right">
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="createcanvas()">Open Modal</button>
+      <button type="button" class="btn btn-info btn-lg" style="margin-left: 5%; margin-top: 2%" data-toggle="modal" data-target="#myModal" onclick="createcanvas()">Preview</button>
 
     </div>
   <div class="buttom"><div id="demo" class="carousel slide" data-ride="carousel">
@@ -227,17 +236,17 @@ body .no-padding{
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/LisaKastner3.jpeg" title="Lorem Ipsum important" id = "1stimg" onclick="choose_image('images/LisaKastner3.jpeg','1stimg', 'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits.', 'I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','http://lelique.de','diekunsttherapeutin', 'https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz')"> 
+    object-fit: cover;" src="images/LisaKastner3.jpeg" title="Lorem Ipsum important" id = "1stimg" onclick="choose_image('images/LisaKastner3.jpeg','1stimg', 'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits.', 'I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','http://lelique.de',' diekunsttherapeutin','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz')"> 
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img  style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/LisaKastner2.jpeg"  title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."  id = "2stimg" onclick="choose_image('images/LisaKastner2.jpeg', '2stimg',  'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits.', 'I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','http://lelique.de','diekunsttherapeutin', 'https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz')">
+    object-fit: cover;" src="images/LisaKastner2.jpeg"  title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."  id = "2stimg" onclick="choose_image('images/LisaKastner2.jpeg', '2stimg',  'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits.', 'I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','diekunsttherapeutin', 'We love her amazing and passionate abstract art style. Check out her website or Instagram:','http://lelique.de', 'https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz')">
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img  style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/milkyway_nate.jpg" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry." id = "3stimg" onclick="choose_image('images/milkyway_nate.jpg', '3stimg')">
+    object-fit: cover;" src="images/milkyway_nate.jpg" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry." id = "3stimg" onclick="choose_image('images/milkyway_nate.jpg', '2stimg',  'Nate Polta','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible« And they are.', '','His photography is soul touching. He manages to catch Mother Nature\'s beauty, a person\'s unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','https://www.natepolta.com/Photos', '', '')">
       </div>   
     </div>
     <div class="carousel-item">
@@ -252,12 +261,12 @@ body .no-padding{
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/sea_nate.jpg"  id = "5stimg" onclick="choose_image('images/sea_nate.jpg', '5stimg','Nate Polta','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible And they are.His photography is soul touching. He manages to catch Mother Natures beauty, a person unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','', '', '', 'https://www.natepolta.com/Photos')">
+    object-fit: cover;" src="images/sea_nate.jpg"  id = "5stimg" onclick="choose_image('images/sea_nate.jpg', '5stimg',  'Nate Polta','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible« And they are.', '','His photography is soul touching. He manages to catch Mother Nature\'s beauty, a person\'s unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','https://www.natepolta.com/Photos', '', '')">
       </div>   
        <div class="col-xs-3 col-sm-3 col-md-3">
         <img   style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/moon_nate.jpg" id = "6stimg" onclick="choose_image('images/moon_nate.jpg', '6stimg','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible And they are.His photography is soul touching. He manages to catch Mother Natures beauty, a person unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','', '', '', '', 'https://www.natepolta.com/Photos')">
+    object-fit: cover;" src="images/moon_nate.jpg" id = "6stimg" onclick="choose_image('images/moon_nate.jpg', '6stimg', 'Nate Polta','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible« And they are.', '','His photography is soul touching. He manages to catch Mother Nature\'s beauty, a person\'s unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','https://www.natepolta.com/Photos', '', '')">
       </div> 
     </div>
 
@@ -269,12 +278,12 @@ body .no-padding{
 
         <img style="    float: left;
     max-height: 150px;
-    object-fit: cover;"  src="images/woods_nate.jpg"  id = "9stimg" onclick="choose_image('images/woods_nate.jpg', '9stimg', 'Nate Polta', 'Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible And they are.His photography is soul touching. He manages to catch Mother Natures beauty, a person unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','', '', 'https://www.natepolta.com/Photos', '','')"/>
+    object-fit: cover;"  src="images/woods_nate.jpg"  id = "9stimg" onclick="choose_image('images/woods_nate.jpg', '9stimg', 'Nate Polta', 'Nate Polta','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible« And they are.', '','His photography is soul touching. He manages to catch Mother Nature\'s beauty, a person\'s unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','https://www.natepolta.com/Photos', '', '')"/>
       </div>  
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img  style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/1.jpg" id = "7stimg" onclick="choose_image('images/1.jpg', '7stimg','Simon Burks', ' Simon Burks is a 26 years old artist resident in Hamburg (Germany).This artwork is untitled, «If Id name it, Id probably give it another title, like every single day We love Simons art because of this dynamic and its uniqueness and beautiful color patterns.Simon usually uses wax crayon or acryl paint. «I like my creative freedom - Im inspired by life«. Go check out his creative work and photography','', '', '','simonburks', 'https://www.instagram.com/si.burks/?hl=de')"> 
+    object-fit: cover;" src="images/1.jpg" id = "7stimg" onclick="choose_image('images/1.jpg', '7stimg','Simon Burks', ' Simon Burks is a 26 years old artist resident in Hamburg (Germany).This artwork is untitled, «If Id name it, Id probably give it another title, like every single day We love Simons art because of this dynamic and its uniqueness and beautiful color patterns.Simon usually uses wax crayon or acryl paint. «I like my creative freedom - Im inspired by life«. Go check out his creative work and photography','', '', '','https://www.instagram.com/si.burks/?hl=de', 'simonburks')"> 
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img  style="    float: left;
@@ -336,11 +345,11 @@ body .no-padding{
       var elem2 = document.getElementById('image_content2');
       elem2.style.backgroundImage = 'url('+source+')';
 
-
       var elem = document.createElement('q');
       elem.id = "au";
       content = document.createTextNode(quote);
       elem.appendChild(content)
+    
 
 
 
@@ -349,12 +358,12 @@ body .no-padding{
       document.getElementById('aabout').innerHTML = about;
       document.getElementById('about2').innerHTML = '';
       document.getElementById('about2').appendChild(elem);
-      document.getElementById('web').innerHTML = web;
+      document.getElementById('web').innerHTML = "   " +web;
       document.getElementById('web').href = web;
-      document.getElementById('instagram').innerHTML = uname2;
+      document.getElementById('instagram').innerHTML = "   " + uname2;
       document.getElementById('instagram').href = instagram;
 
-      alert(document.getElementById('instagram').innerHTML);      
+      document.getElementById('instagram').innerHTML;      
 
   }
   function add_image(){
@@ -386,12 +395,25 @@ function makeBold() {
 }
 
     function fontEditor(fontName) {
+
      document.getElementById('mydiv').style.fontFamily  = fontName;
      document.getElementById('white_div').style.fontFamily = fontName;
 
 
    
 }
+
+
+    function changefontsize(fontsize) {
+
+            alert(fontsize)
+     document.getElementById('mydiv').style.fontSize  = fontsize + "px";
+     document.getElementById('white_div').style.fontSize = fontsize  + "px";
+
+
+   
+}
+
 
 function change_border(){
  document.getElementById("image_content").style.border = "thick solid #0000FF";
@@ -518,7 +540,7 @@ function converttoimage(){
 
   newImg.src = url;
   document.body.appendChild(newImg);
-  alert(newImg.src);
+  newImg.src;
 });
 }
 
@@ -572,7 +594,7 @@ function dragElement(elmnt) {
 var a2a_config = a2a_config || {};
 a2a_config.overlays = a2a_config.overlays || [];
 a2a_config.overlays.push({
-    services: ['pinterest', 'facebook', 'houzz', 'tumblr', 'email'],
+    services: ['pinterest', 'facebook', 'houzz', 'tumblr', 'email','whatsapp','telegram'],
     size: '50',
     style: 'horizontal',
     position: 'top center'
