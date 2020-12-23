@@ -190,7 +190,7 @@ body .no-padding{
     <div class="card-body">
             <button onclick="add_image()">Transparent Background</button>
     </div>
-    <button type="button" class="btn btn-info btn-lg" style="margin-left: 5%; margin-top: 2%" data-toggle="modal" data-target="#myModal" onclick="changeborder()">Preview</button>
+    <button type="button" class="btn btn-info btn-lg" style="margin-left: 5%; margin-top: 2%" data-toggle="modal" data-target="#myModal" id="btn-Convert-Html2Image" onclick="changeborder()">Preview</button>
   </div>
 
 <div class="card bg-light text-dark" style="margin-left: 10%; margin-top: 5%;">
@@ -374,8 +374,8 @@ body .no-padding{
 
   {
 
-      document.getElementById('mydiv').style.fontStyle = 'normal';
-      document.getElementById('white_div').style.fontStyle = 'normal';
+      document.getElementById('mydiv').style.fontStyle = 'none';
+      document.getElementById('white_div').style.fontStyle = 'none';
 
   }else{
 
@@ -468,8 +468,7 @@ function change_border(col){
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" id="btn-Convert-Html2Image" data-target="#myModal2">Share</button>
-        <a download style="display:none" id="download">Download</a>
+        <button type="button" class="btn btn-default"><a download  id="download">Download</a></button>
 
       </div>
     </div>
@@ -517,15 +516,11 @@ function createcanvas(){
 
    html2canvas(document.querySelector("#content")).then(canvas => {
     canvas.setAttribute("id", "canv");
-    document.getElementById('prev').innerHTML = "";
-    document.getElementById('prev').style.width = "150px";
-    document.getElementById('prev').style.height = "200px";
-    document.getElementById('prev').appendChild(canvas);
 
 
     getCanvas = canvas;
 
-      $("#btn-Convert-Html2Image").on('click', function () {
+
     var imgageData = getCanvas.toDataURL("image/png");
 
     // Now browser starts downloading it instead of just showing it
@@ -548,13 +543,11 @@ function createcanvas(){
 
           document.getElementById('download').style.display = 'block';
           document.getElementById('download').href = response;
-    
-
 
       });
 
       
-  });
+
 });
 
       document.getElementById("mydiv").style.borderColor = "black";
