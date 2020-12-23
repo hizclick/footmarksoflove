@@ -131,17 +131,17 @@ body .no-padding{
 
 <div class="grid-container">
   <div class="center">
-   <div class="card bg-light text-dark" style="margin-left: 30%; margin-top: 2%; width: 60%; height: 20%" style="display: none" id = "text_menu_bar_card">
+   <div class="card bg-light text-dark" style="margin-left: 30%; margin-top: 2%; width: 70%; height: 20%" style="display: none" id = "text_menu_bar_card">
     <div class="card-body">
     <ul id="text_menu_bar">
       <li onclick="makeBold()"><button class="btn btn-light" style="background-color:  #e7dcda;">BOLD</button></li>
       <li onclick="makeItalic()"><button class="btn btn-light">ITALIC</button></li>
       <li onclick="dmakeUnderline()"><button class="btn btn-light">UNDERLINE</button></li>
       <li onclick=""><button class="btn btn-light"><select onchange="fontEditor(this[this.selectedIndex].value)">
+    <option value="GlacialIndifferenceRegular">Glacial Indifference</option>
     <option>Arial</option>
     <option value="Calibri">Calibri</option>
     <option value="Comic Sans MS">Comic Sans MS</option>
-    <option value="GlacialIndifferenceRegular">Glacial Indifference</option>
 </select></button></li>
   <li onclick=""><button class="btn btn-light"><select onchange="changefontsize(this[this.selectedIndex].value)">
     <option value="12">12</option>
@@ -156,7 +156,7 @@ body .no-padding{
     </ul>
   </div>
 </div>
-<div id="content" style="width: 60%; height: 75%; margin-left: 30%;">
+<div id="content" style="width: 60%; height: 90%; margin-left: 30%;">
 
 
 
@@ -192,16 +192,6 @@ body .no-padding{
     </div>
     <button type="button" class="btn btn-info btn-lg" style="margin-left: 5%; margin-top: 2%" data-toggle="modal" data-target="#myModal" onclick="changeborder()">Preview</button>
   </div>
-    <div class="card bg-light text-dark" style="margin-left: 10%; margin-top: 5%;">
-      <div class="card-body">
-<button class="btn btn-light"><select onchange="change_border(this[this.selectedIndex].value)">
-    <option value="black">Frame 1</option>
-    <option value="red">Frame 2</option>
-    <option value="blue">Frame 3</option>
-</select></button>
-  </div>
-</div>
-
 
 <div class="card bg-light text-dark" style="margin-left: 10%; margin-top: 5%;">
       <div class="card-body" style="font-family: 'GlacialIndifferenceRegular';">
@@ -229,7 +219,7 @@ body .no-padding{
     <li data-target="#demo" data-slide-to="2"></li>
   </ul>
   <!-- The slideshow -->
-  <div class="container carousel-inner no-padding">
+  <div class="container carousel-inner no-padding" style="margin-top: 4%;">
     <div class="carousel-item active">
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img>
@@ -237,17 +227,17 @@ body .no-padding{
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/LisaKastner3.jpeg" title="Lorem Ipsum important" id = "1stimg" onclick="choose_image('images/LisaKastner3.jpeg','1stimg', 'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits.', 'I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','http://lelique.de',' diekunsttherapeutin','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz')"> 
+    object-fit: cover;" src="images/LisaKastner3.jpeg" title="Lorem Ipsum important" id = "1stimg" onclick="choose_image('images/LisaKastner3.jpeg','1stimg', 'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits. \n I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz','http://lelique.de',' diekunsttherapeutin')"> 
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img  style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/LisaKastner2.jpeg"  title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."  id = "2stimg" onclick="choose_image('images/LisaKastner2.jpeg', '2stimg',  'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits.', 'I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','diekunsttherapeutin', 'We love her amazing and passionate abstract art style. Check out her website or Instagram:','http://lelique.de', 'https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz')">
+    object-fit: cover;" src="images/LisaKastner2.jpeg"  title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."  id = "2stimg" onclick="choose_image('images/LisaKastner2.jpeg', '2stimg',  'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits. \n I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz','http://lelique.de',' diekunsttherapeutin')">
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img  style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/milkyway_nate.jpg" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry." id = "3stimg" onclick="choose_image('images/milkyway_nate.jpg', '2stimg',  'Nate Polta','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible« And they are.', '','His photography is soul touching. He manages to catch Mother Nature\'s beauty, a person\'s unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','https://www.natepolta.com/Photos', '', '')">
+    object-fit: cover;" src="images/milkyway_nate.jpg" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry." id = "3stimg" onclick="choose_image('images/milkyway_nate.jpg', '2stimg',  'Nate Polta','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him &ldquo;Do you work for National Geographic? You must! These pictures are incredible&ldquo; And they are.', '','His photography is soul touching. He manages to catch Mother Nature\'s beauty, a person\'s unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','https://www.natepolta.com/Photos', '', '')">
       </div>   
     </div>
     <div class="carousel-item">
@@ -257,17 +247,17 @@ body .no-padding{
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img  style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/LisaKastner1.jpeg" id = "4stimg" onclick="choose_image('images/LisaKastner1.jpeg', '4stimg',  'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits.', 'I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','http://lelique.de','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz', 'kunsttherapeutin')"> 
+    object-fit: cover;" src="images/LisaKastner1.jpeg" id = "4stimg" onclick="choose_image('images/LisaKastner1.jpeg', '4stimg',  'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits. \n I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz','http://lelique.de',' diekunsttherapeutin')"> 
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/sea_nate.jpg"  id = "5stimg" onclick="choose_image('images/sea_nate.jpg', '5stimg',  'Nate Polta','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible« And they are.', '','His photography is soul touching. He manages to catch Mother Nature\'s beauty, a person\'s unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','https://www.natepolta.com/Photos', '', '')">
+    object-fit: cover;" src="images/sea_nate.jpg"  id = "5stimg" onclick="choose_image('images/sea_nate.jpg', '5stimg',  'Nate Polta','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him &ldquo;Do you work for National Geographic? You must! These pictures are incredible&ldquo; And they are.', '','His photography is soul touching. He manages to catch Mother Nature\'s beauty, a person\'s unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','https://www.natepolta.com/Photos', '', '')">
       </div>   
        <div class="col-xs-3 col-sm-3 col-md-3">
         <img   style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/moon_nate.jpg" id = "6stimg" onclick="choose_image('images/moon_nate.jpg', '6stimg', 'Nate Polta','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible« And they are.', '','His photography is soul touching. He manages to catch Mother Nature\'s beauty, a person\'s unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','https://www.natepolta.com/Photos', '', '')">
+    object-fit: cover;" src="images/moon_nate.jpg" id = "6stimg" onclick="choose_image('images/moon_nate.jpg', '6stimg', 'Nate Polta','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him &ldquo;Do you work for National Geographic? You must! These pictures are incredible&ldquo; And they are.', '','His photography is soul touching. He manages to catch Mother Nature\'s beauty, a person\'s unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','https://www.natepolta.com/Photos', '', '')">
       </div> 
     </div>
 
@@ -279,12 +269,12 @@ body .no-padding{
 
         <img style="    float: left;
     max-height: 150px;
-    object-fit: cover;"  src="images/woods_nate.jpg"  id = "9stimg" onclick="choose_image('images/woods_nate.jpg', '9stimg', 'Nate Polta', 'Nate Polta','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible« And they are.', '','His photography is soul touching. He manages to catch Mother Nature\'s beauty, a person\'s unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','https://www.natepolta.com/Photos', '', '')"/>
+    object-fit: cover;"  src="images/woods_nate.jpg"  id = "9stimg" onclick="choose_image('images/woods_nate.jpg', '9stimg', 'Nate Polta', 'Nate Polta','Nate Polta is a Denver based photographer. When I (Luisa) met him in Sri Lanka and took a first glimpse at his work, I immediately asked him «Do you work for National Geographic? You must! These pictures are incredible« And they are.', 'His photography is soul touching. He manages to catch Mother Nature\'s beauty, a person\'s unique sparkle in an extraordinary way. Impossible to describe, so go and see it for yourself:','https://www.natepolta.com/Photos','', '', '')"/>
       </div>  
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img  style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/1.jpg" id = "7stimg" onclick="choose_image('images/1.jpg', '7stimg','Simon Burks', ' Simon Burks is a 26 years old artist resident in Hamburg (Germany).This artwork is untitled, «If Id name it, Id probably give it another title, like every single day We love Simons art because of this dynamic and its uniqueness and beautiful color patterns.Simon usually uses wax crayon or acryl paint. «I like my creative freedom - Im inspired by life«. Go check out his creative work and photography','', '', '','https://www.instagram.com/si.burks/?hl=de', 'simonburks')"> 
+    object-fit: cover;" src="images/1.jpg" id = "7stimg" onclick="choose_image('images/1.jpg', '7stimg','Simon Burks', ' Simon Burks is a 26 years old artist resident in Hamburg (Germany).This artwork is untitled, &ldquo; If Id name it, Id probably give it another title, like every single day We love Simons art because of this dynamic and its uniqueness and beautiful color patterns.Simon usually uses wax crayon or acryl paint. &ldquoI like my creative freedom - Im inspired by life&ldquo;. Go check out his creative work and photography','', '','','simonburks','https://www.instagram.com/si.burks/?hl=de')"> 
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img  style="    float: left;
@@ -368,7 +358,7 @@ body .no-padding{
 
   }
   function add_image(){
-          document.getElementById("text_menu_bar_card").style.display = 'block';
+          document.getElementById("mydiv").style.display = 'block';
       if(document.getElementById("mydiv").style.backgroundColor == 'transparent'){
              document.getElementById("mydiv").style.backgroundColor = 'white';
 
@@ -379,23 +369,62 @@ body .no-padding{
   }
 
      function makeItalic() {
-        document.getElementById('mydiv').style.fontStyle = 'italic';
-        document.getElementById('white_div').style.fontStyle = 'italic';
+
+    if(document.getElementById('mydiv').style.fontStyle == 'italic')
+
+  {
+
+      document.getElementById('mydiv').style.fontStyle = 'none';
+      document.getElementById('white_div').style.fontStyle = 'none';
+
+  }else{
+
+          document.getElementById('mydiv').style.fontStyle = 'italic';
+        document.getElementById('white_div').style.fontStyle = 'italic';   
+  }
+
 }
 
 function dmakeUnderline() {
-    document.getElementById('mydiv').style.textDecoration = "underline";
-    document.getElementById('white_div').style.textDecoration = 'underline';
+
+      if(document.getElementById('mydiv').style.textDecoration == 'underline')
+
+  {
+
+      document.getElementById('mydiv').style.textDecoration = 'none';
+      document.getElementById('white_div').style.textDecoration = 'none';
+
+  }else{
+
+        document.getElementById('mydiv').style.textDecoration = "underline";
+        document.getElementById('white_div').style.textDecoration = 'underline';
+  }
+
 
 }
   
 function makeBold() {
-  document.getElementById('mydiv').style.fontWeight = 'bold';
-  document.getElementById('white_div').style.fontWeight = 'bold';
+
+    if(document.getElementById('mydiv').style.fontWeight == 'bold')
+
+  {
+
+      document.getElementById('mydiv').style.fontWeight = 'normal';
+      document.getElementById('white_div').style.fontWeight = 'normal';
+
+  }
+  else{
+      document.getElementById('mydiv').style.fontWeight = 'bold';
+     document.getElementById('white_div').style.fontWeight = 'bold';
+  
+
+  }
 
 }
 
     function fontEditor(fontName) {
+
+
 
      document.getElementById('mydiv').style.fontFamily  = fontName;
      document.getElementById('white_div').style.fontFamily = fontName;
@@ -407,7 +436,7 @@ function makeBold() {
 
     function changefontsize(fontsize) {
 
-            alert(fontsize)
+
      document.getElementById('mydiv').style.fontSize  = fontsize + "px";
      document.getElementById('white_div').style.fontSize = fontsize  + "px";
 
@@ -502,7 +531,7 @@ function createcanvas(){
     // Now browser starts downloading it instead of just showing it
         $.ajax({
         type: "POST",
-        url: "test.php",
+        url: "http://localhost/test.php",
         data: { 
            imgBase64: imgageData
         }
