@@ -58,7 +58,8 @@ function updateFirst(event) {
 }
 #text_menu_bar{}
 #image_content, #image_content2{
-  background-size: cover;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 body{
 
@@ -97,7 +98,8 @@ body .no-padding{
     float: left;
     width: 10px;
     max-height: 150px;
-    object-fit: cover;
+    object-fit: contain;
+    background-repeat: no-repeat;
 }
  li{ 
   display:inline;
@@ -137,10 +139,10 @@ body .no-padding{
   background-color:  #e7dcda;
 }
 #content{
-  width: 60%; height: 90%; margin-left: 30%; 
+  width: 60%; height: 100%; margin-left: 30%; background-size: contain;  
 }
 #image_content{
-width: 50%; height: 100%; padding: 10px; float: left;
+width: 50%; height: 100%; padding: 10px; float: left; background-size: 100% 100%; 
 
 }
 
@@ -148,7 +150,8 @@ width: 50%; height: 100%; padding: 10px; float: left;
   border: 2px solid;
   width: 300px;
   resize: both;
-  overflow: auto; background-color: transparent
+  overflow: auto; background-color: transparent;
+  background-size: 100% 100%;  
 
 }
 #mydivheader{
@@ -156,7 +159,7 @@ width: 50%; height: 100%; padding: 10px; float: left;
 background-color: transparent;
 }
 #image_content2{
-width: 48%; height: 100%;  margin-left: 1%;  padding: 3% 3% 3% 3%; float: left;
+width: 48%; height: 100%;  margin-left: 1%;  padding: 3% 3% 3% 3%; float: left; background-size: 100% 100%;;
 
 }
 #white_div{
