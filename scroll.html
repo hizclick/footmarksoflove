@@ -60,7 +60,10 @@ function updateFirst(event) {
 #image_content, #image_content2{
   background-size: cover;
 }
+body{
 
+font-family: 'GlacialIndifferenceRegular';
+}
 #mydiv {
   position: absolute;
   z-index: 9;
@@ -114,13 +117,96 @@ body .no-padding{
 .left { grid-area: left; }
 .right { grid-area: right; }
 .buttom { grid-area: buttom; }
-
+.buttom{
+  margin-top: 5%;
+}
   #draggable { width: 150px; height: 150px; padding: 0.5em; }
+}
 .btn{
  background-color:  #e7dcda;
 
 }
 
+#text_menu_bar_card{
+
+  margin-left: 30%; margin-top: 2%; width: 70%; height: 20%;
+}
+
+#b{
+
+  background-color:  #e7dcda;
+}
+#content{
+  width: 60%; height: 90%; margin-left: 30%; 
+}
+#image_content{
+width: 50%; height: 100%; padding: 10px; float: left;
+
+}
+
+#mydiv{
+  border: 2px solid;
+  width: 300px;
+  resize: both;
+  overflow: auto; background-color: transparent
+
+}
+#mydivheader{
+
+background-color: transparent;
+}
+#image_content2{
+width: 48%; height: 100%;  margin-left: 1%;  padding: 3% 3% 3% 3%; float: left;
+
+}
+#white_div{
+background-color: white; width: 100%; height: 100%; font-family: 'GlacialIndifferenceRegular'; 
+
+}
+
+.card .bg-light .text-dark{
+
+   margin-left: 10%; margin-top: 5%;
+}
+
+.btn .btn-info .btn-lg{
+
+margin-left: 5%; margin-top: 2%;
+}
+
+.card .bg-light .text-dark{
+
+  margin-left: 10%; margin-top: 5%;
+}
+
+.premade{
+  border:none; 
+}
+
+.container .arousel-inner .no-padding{
+
+ margin-top: 4%;
+  } 
+
+  #about{
+margin-left: 34%; width: 49%; margin-top: 1%; display: none;
+
+  }
+
+  #ac{
+   background-color:  #e7dcda; font-family: 'GlacialIndifferenceRegular'; 
+  }
+  #webimg{
+    width: 2%;
+  }
+  #imgins{
+    width: 2%;
+  }
+
+  .modal-content{
+
+    width: 700px; height: 450px;
+  }
 </style>
 </head>
 
@@ -131,10 +217,10 @@ body .no-padding{
 
 <div class="grid-container">
   <div class="center">
-   <div class="card bg-light text-dark" style="margin-left: 30%; margin-top: 2%; width: 70%; height: 20%" style="display: none" id = "text_menu_bar_card">
+   <div class="card bg-light text-dark"  id = "text_menu_bar_card">
     <div class="card-body">
     <ul id="text_menu_bar">
-      <li onclick="makeBold()"><button class="btn btn-light" style="background-color:  #e7dcda;">BOLD</button></li>
+      <li onclick="makeBold()"><button class="btn btn-light" id="b">BOLD</button></li>
       <li onclick="makeItalic()"><button class="btn btn-light">ITALIC</button></li>
       <li onclick="dmakeUnderline()"><button class="btn btn-light">UNDERLINE</button></li>
       <li onclick=""><button class="btn btn-light"><select onchange="fontEditor(this[this.selectedIndex].value)">
@@ -156,49 +242,46 @@ body .no-padding{
     </ul>
   </div>
 </div>
-<div id="content" style="width: 60%; height: 90%; margin-left: 30%;">
+<div id="content">
 
 
 
-    <div id="image_content" style="width: 50%; height: 100%; padding: 10px; float: left;">
+    <div id="image_content">
+
+ <div id="mydiv" contenteditable="true">
+  <div id="mydivheader">  
 
 
-  <p></p>
-  <div id="mydiv" contenteditable="true" style="  border: 2px solid;
-  width: 300px;
-  resize: both;
-  overflow: auto; background-color: transparent">
-  <div id="mydivheader" style="background-color: transparent">  
+
 </div>
 
 <!--  <textarea id="editable" style="width: 48%; height: 100%; resize: both !important; font-family: 'GlacialIndifferenceRegular' "></textarea> -->
-</div>
-
-
 
 
 </div>
 
-<div id="image_content2" style="width: 48%; height: 100%;  margin-left: 1%;  padding: 3% 3% 3% 3%; float: left"> <div contenteditable="true"  id="white_div" style="background-color: white; width: 100%; height: 100%; font-family: 'GlacialIndifferenceRegular'; "></div>
+</div>
+
+<div id="image_content2"> <div contenteditable="true"  id="white_div"></div>
 
 </div>
 </div>
 </div>
 <div class="left">
-    <div class="card bg-light text-dark" style="margin-left: 10%; margin-top: 5%;">
+    <div class="card bg-light text-dark">
     <div class="card-body">
             <button onclick="add_image()">Transparent Background</button>
     </div>
-    <button type="button" class="btn btn-info btn-lg" style="margin-left: 5%; margin-top: 2%" data-toggle="modal" data-target="#myModal" id="btn-Convert-Html2Image" onclick="changeborder()">Preview</button>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="btn-Convert-Html2Image" onclick="changeborder()">Preview</button>
   </div>
 
-<div class="card bg-light text-dark" style="margin-left: 10%; margin-top: 5%;">
-      <div class="card-body" style="font-family: 'GlacialIndifferenceRegular';">
-      <button style="border:none;" onclick="add_pretext('HI LOVE')">HI LOVE</button> <br> <br>
-      <button style="border: none;" onclick="add_pretext('KIND SOUL')">KIND SOUL</button> <br> <br>
-      <button style="border: none;" onclick="add_pretext('LOVE FOR YOU')">LOVE FOR YOU</button> <br> <br>
-      <button style="border: none;" onclick="add_pretext('HI BEAUTIFUL')">HI BEAUTIFUL</button> <br> <br>
-      <button style="border: none;" onclick="add_pretext('LOVELY CHRISTMAS')">LOVELY CHRISTMAS</button> <br> <br>
+<div class="card bg-light text-dark">
+      <div class="card-body">
+      <button class="premade" onclick="add_pretext('HI LOVE')">HI LOVE</button> <br> <br>
+      <button class="premade" onclick="add_pretext('KIND SOUL')">KIND SOUL</button> <br> <br>
+      <button class="premade" onclick="add_pretext('LOVE FOR YOU')">LOVE FOR YOU</button> <br> <br>
+      <button class="premade" onclick="add_pretext('HI BEAUTIFUL')">HI BEAUTIFUL</button> <br> <br>
+      <button class="premade" onclick="add_pretext('LOVELY CHRISTMAS')">LOVELY CHRISTMAS</button> <br> <br>
   </div>
 </div>
 
@@ -218,13 +301,13 @@ body .no-padding{
     <li data-target="#demo" data-slide-to="2"></li>
   </ul>
   <!-- The slideshow -->
-  <div class="container carousel-inner no-padding" style="margin-top: 4%;">
+  <div class="container carousel-inner no-padding">
     <div class="carousel-item active">
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img>
       </div>    
       <div class="col-xs-3 col-sm-3 col-md-3">
-        <img style="    float: left;
+        <img class="images" style="    float: left;
     max-height: 150px;
     object-fit: cover;" src="images/LisaKastner3.jpeg" title="Lorem Ipsum important" id = "1stimg" onclick="choose_image('images/LisaKastner3.jpeg','1stimg', 'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits. \n I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz','http://lelique.de',' diekunsttherapeutin')"> 
       </div>   
@@ -291,11 +374,11 @@ body .no-padding{
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
-    <div class="card-footer" id="about" style="margin-left: 34%; width: 49%; margin-top: 1%; display: none">
+    <div class="card-footer" id="about">
   <div class="row">
   <div class="column">
     <div class="card">
-      <div class="container" style = "background-color:  #e7dcda; font-family: 'GlacialIndifferenceRegular';">
+      <div class="container" id="ac">
         <h2 id='aname'>Lisa Kastner</h2>
         <p id='aabout'>Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. 
         She also has an incredible art collection of colorful portraits. 
@@ -303,8 +386,8 @@ body .no-padding{
         <q id="aquate">I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.</q>
       </p>
       <p id="about2">We love her amazing and passionate abstract art style. Check out her website or Instagram:</p>
-        <img src="images/web.png" style="width: 2%; margin-top: "/><a id="web" ></a> <br>
-        <img src="images/instagram.png" style="width: 2%; margin-top: "/><a id="instagram" href="https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz">&nbsp;&nbsp;unsttherapeutin</a>
+        <img src="images/web.png" id="webimg"/><a id="web" ></a> <br>
+        <img src="images/instagram.png" id="imgins"/><a id="instagram" href="https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz">&nbsp;&nbsp;unsttherapeutin</a>
       </div>
     </div>
   </div>
@@ -457,17 +540,16 @@ function change_border(col){
   <div class="modal-dialog">
 
     <!-- Modal content-->
-    <div class="modal-content" style="width: 900px; height: 700px">
+    <div class="modal-content" id="mc">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
       </div>
       <div class="modal-body" id="mbody">
                 <div id="prev"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-default"><a download  id="download">Download</a></button>
+        <button type="button"  class="btn btn-default"><a download  id="download">Download</a></button>
 
       </div>
     </div>
@@ -535,10 +617,18 @@ function createcanvas(){
           x.setAttribute("src", response);
           x.setAttribute("alt", "The Pulpit Rock");
 
-          document.getElementById('prev').style.width = "500px";
-          document.getElementById('prev').style.height = "500px";        
+         var  he  = document.getElementById('mbody').clientHeight;
+          var wid = document.getElementById('mbody').soffsetWidth;
+
+          y = he - 20;
+          x.style.width = wid + "px";
+          x.style.height = y + "px";
           document.getElementById('prev').innerHTML = ''
           document.getElementById('prev').appendChild(x);
+
+
+
+
 
           document.getElementById('download').style.display = 'block';
           document.getElementById('download').href = response;
