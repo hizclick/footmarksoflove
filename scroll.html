@@ -23,6 +23,11 @@
 
 <script type="text/javascript" src="dist\js\html2canvas.min.js"></script>
 
+
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script>
 
     var colorWell;
@@ -172,7 +177,6 @@ background-color: white; width: 100%; height: 100%; font-family: 'GlacialIndiffe
    margin-left: 10%; margin-top: 5%;
 }
 
-
 .btn .btn-info .btn-lg{
 
 margin-left: 5%; margin-top: 2%;
@@ -207,23 +211,10 @@ margin-left: 34%; width: 49%; margin-top: 1%; display: none;
     width: 2%;
   }
 
-
-
-  @media only screen and (max-width: 800px) {
-    .modal-content {
-    width: 350px; height: 250px;
-  }
-}
   .modal-content{
 
     width: 700px; height: 450px;
   }
-
-  @media only screen and (max-width: 800px) {
-    .modal-content {
-    width: 350px; height: 250px;
-  }
-}
 </style>
 </head>
 
@@ -239,7 +230,9 @@ margin-left: 34%; width: 49%; margin-top: 1%; display: none;
     <ul id="text_menu_bar">
       <li onclick="makeBold()"><button class="btn btn-light" id="b">BOLD</button></li>
       <li onclick="makeItalic()"><button class="btn btn-light">ITALIC</button></li>
-      <li onclick="dmakeUnderline()"><button class="btn btn-light">UNDERLINE</button></li>
+      <li onclick="dmakeUnderline()"><a href="#">
+          <span class="glyphicon glyphicon-bold"></span>
+        </a></li>
       <li onclick=""><button class="btn btn-light"><select onchange="fontEditor(this[this.selectedIndex].value)">
     <option value="GlacialIndifferenceRegular">Glacial Indifference</option>
     <option>Arial</option>
@@ -263,7 +256,7 @@ margin-left: 34%; width: 49%; margin-top: 1%; display: none;
 
 
 
-    <div id="image_content">
+    <div id="image_content"  style=" position: relative;">
 
  <div id="mydiv" contenteditable="true">
   <div id="mydivheader">  
@@ -276,10 +269,15 @@ margin-left: 34%; width: 49%; margin-top: 1%; display: none;
 
 
 </div>
-
+<p style="position: absolute;
+    bottom: 0; margin-left: 25%; color: #e7dcda;">#Footmarksoflove</p>
 </div>
 
-<div id="image_content2"> <div contenteditable="true"  id="white_div"></div>
+<div id="image_content2"><div contenteditable="true"  id="white_div">
+  
+
+
+</div>
 
 </div>
 </div>
@@ -289,7 +287,6 @@ margin-left: 34%; width: 49%; margin-top: 1%; display: none;
     <div class="card-body">
             <button onclick="add_image()">Transparent Background</button>
     </div>
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="btn-Convert-Html2Image" onclick="changeborder()">Preview</button>
   </div>
 
 <div class="card bg-light text-dark">
@@ -326,12 +323,12 @@ margin-left: 34%; width: 49%; margin-top: 1%; display: none;
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img class="images" style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/LisaKastner3.jpeg" title="Lorem Ipsum important" id = "1stimg" onclick="choose_image('images/LisaKastner3.jpeg','1stimg', 'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits. \n I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz','http://lelique.de',' diekunsttherapeutin')"> 
+    object-fit: cover;" src="images/LisaKastner3.jpeg" title="Lorem Ipsum important" id = "1stimg" onclick="choose_image('images/LisaKastner33.jpeg','1stimg', 'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits. \n I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz','http://lelique.de',' diekunsttherapeutin')"> 
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img  style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/LisaKastner2.jpeg"  title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."  id = "2stimg" onclick="choose_image('images/LisaKastner2.jpeg', '2stimg',  'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits. \n I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz','http://lelique.de',' diekunsttherapeutin')">
+    object-fit: cover;" src="images/LisaKastner2.jpeg"  title="Lorem Ipsum is simply dummy text of the printing and typesetting industry."  id = "2stimg" onclick="choose_image('images/LisaKastner22.jpeg', '2stimg',  'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits. \n I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz','http://lelique.de',' diekunsttherapeutin')">
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img  style="    float: left;
@@ -346,7 +343,7 @@ margin-left: 34%; width: 49%; margin-top: 1%; display: none;
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img  style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/LisaKastner1.jpeg" id = "4stimg" onclick="choose_image('images/LisaKastner1.jpeg', '4stimg',  'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits. \n I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz','http://lelique.de',' diekunsttherapeutin')"> 
+    object-fit: cover;" src="images/LisaKastner11.jpeg" id = "4stimg" onclick="choose_image('images/LisaKastner11.jpeg', '4stimg',  'Lisa Kastner','Lisa Kastner is a qualified art therapist resident in Berlin (Germany). For her, painting is passion and sensuality. She also has an incredible art collection of colorful portraits. \n I can immerse myself in it and express my feelings. I like to work with loud, atmospheric music and get into a deep state.','We love her amazing and passionate abstract art style. Check out her website or Instagram:','https://instagram.com/diekunsttherapeutin?igshid=vxbrm33s7jnz','http://lelique.de',' diekunsttherapeutin')"> 
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img style="    float: left;
@@ -373,7 +370,7 @@ margin-left: 34%; width: 49%; margin-top: 1%; display: none;
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img  style="    float: left;
     max-height: 150px;
-    object-fit: cover;" src="images/1.jpg" id = "7stimg" onclick="choose_image('images/1.jpg', '7stimg','Simon Burks', ' Simon Burks is a 26 years old artist resident in Hamburg (Germany).This artwork is untitled, &ldquo; If Id name it, Id probably give it another title, like every single day We love Simons art because of this dynamic and its uniqueness and beautiful color patterns.Simon usually uses wax crayon or acryl paint. &ldquoI like my creative freedom - Im inspired by life&ldquo;. Go check out his creative work and photography','', '','','simonburks','https://www.instagram.com/si.burks/?hl=de')"> 
+    object-fit: cover;" src="images/1.jpg" id = "7stimg" onclick="choose_image('images/1.jpg', '7stimg','Simon Burks', ' Simon Burks is a 26 years old artist resident in Hamburg (Germany).This artwork is untitled, &ldquo; If I\'d name it, Id probably give it another title, like every single day We love Simons art because of this dynamic and its uniqueness and beautiful color patterns.Simon usually uses wax crayon or acryl paint. &ldquoI like my creative freedom - Im inspired by life&ldquo;. Go check out his creative work and photography.','', '','','simonburks','https://www.instagram.com/si.burks/?hl=de')"> 
       </div>   
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img  style="    float: left;
@@ -435,12 +432,19 @@ margin-left: 34%; width: 49%; margin-top: 1%; display: none;
       var elem2 = document.getElementById('image_content2');
       elem2.style.backgroundImage = 'url('+source+')';
 
+
+      if(quote){
       var elem = document.createElement('q');
       elem.id = "au";
       content = document.createTextNode(quote);
-      elem.appendChild(content)
+      elem.appendChild(content);
     
-
+}else{
+      var elem = document.createElement('p');
+      elem.id = "au";
+      content = document.createTextNode(quote);
+      elem.appendChild(content)
+}
 
 
       document.getElementById('about').style.display = "block";
@@ -473,8 +477,8 @@ margin-left: 34%; width: 49%; margin-top: 1%; display: none;
 
   {
 
-      document.getElementById('mydiv').style.fontStyle = 'none';
-      document.getElementById('white_div').style.fontStyle = 'none';
+      document.getElementById('mydiv').style.fontStyle = 'normal';
+      document.getElementById('white_div').style.fontStyle = 'normal';
 
   }else{
 
