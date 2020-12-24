@@ -218,7 +218,7 @@ margin-left: 34%; width: 49%; margin-top: 1%; display: none;
 </style>
 </head>
 
-<body onload="alert('Hi beautiful soul, you are about to spread some love. This is how it works: \r\n1.  Check out our talented artists and choose an artwork for your Love Card \r\n2.    Customize your Love Card cover (left side bar: drag and drop a premade text or write your own greeting) \r\n3.    Write your Love Card message (right side) \r\n4.  Share the love and tag @footmarksoflove')">
+<body onload="alert('Hi beautiful soul, you are about to spread some love. This is how it works: \r\n1.  Check out our talented artists and choose an artwork for your Love Card \r\n2.    Customize your Love Card cover (left side bar: drag and drop a premade text or write your own greeting) \r\n3.    Write your Love Card message (right side) \r\n4.  Download the card')">
 
 
 
@@ -229,9 +229,8 @@ margin-left: 34%; width: 49%; margin-top: 1%; display: none;
     <div class="card-body">
     <ul id="text_menu_bar">
       <li onclick="makeBold()"><button class="btn btn-light" id="b">BOLD</button></li>
-      <li onclick="makeItalic()"><button class="btn btn-light">ITALIC</button></li>
-      <li onclick="dmakeUnderline()"><a href="#">
-          <span class="glyphicon glyphicon-bold"></span>
+      <li onclick="makeItalic()"><button class="btn btn-light"  id="b">ITALIC</button></li>
+      <li onclick="dmakeUnderline()"><button class="btn btn-light"  id="b">UNDERLINE</button></span>
         </a></li>
       <li onclick=""><button class="btn btn-light"><select onchange="fontEditor(this[this.selectedIndex].value)">
     <option value="GlacialIndifferenceRegular">Glacial Indifference</option>
@@ -285,7 +284,9 @@ margin-left: 34%; width: 49%; margin-top: 1%; display: none;
 <div class="left">
     <div class="card bg-light text-dark">
     <div class="card-body">
-            <button onclick="add_image()">Transparent Background</button>
+            <button onclick="add_image()">Transparent Background</button> <br><br>
+
+                <button type="button"  data-toggle="modal" data-target="#myModal" id="btn-Convert-Html2Image" onclick="changeborder()">Preview</button>
     </div>
   </div>
 
